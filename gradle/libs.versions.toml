@@ -1,8 +1,16 @@
 [versions]
 kotlin = "2.2.0"
 compose-plugin = "1.8.2"
+agp = "8.11.0"
+activity-compose = "1.10.1"
+
+[libraries]
+android-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
 
 [plugins]
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin"}
+android-application = {id = "com.android.application", version.ref = "agp"}
+android-library = {id = "com.android.library", version.ref = "agp"}
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin"}

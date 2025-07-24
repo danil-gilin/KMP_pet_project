@@ -1,3 +1,6 @@
+import org.gradle.kotlin.dsl.dependencies
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
@@ -8,6 +11,16 @@ plugins {
 kotlin {
     jvm()
     androidTarget()
+    listOf(
+        iosArm64(),
+        iosX64(),
+        iosSimulatorArm64()
+    ).forEach { iosTarget ->
+        iosTarget.binaries.framework {
+            baseName = "shared"
+            isStatic = true
+        }
+    }
 
     sourceSets {
         commonMain {
@@ -16,6 +29,9 @@ kotlin {
                 implementation(compose.runtime)
                 implementation(compose.ui)
                 implementation(compose.material)
+                implementation(compose.material3)
+                implementation(compose.materialIconsExtended)
+                implementation(compose.components.resources)
             }
         }
     }

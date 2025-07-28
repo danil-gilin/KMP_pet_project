@@ -1,9 +1,9 @@
 package info.javaway.spend_sense
 
-import SayHelloFromCommon
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import info.javaway.spend_sense.root.RootScreen
 
 class RootActivity : ComponentActivity() {
 
@@ -11,7 +11,7 @@ class RootActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            SayHelloFromCommon()
+            RootScreen()
         }
     }
 }

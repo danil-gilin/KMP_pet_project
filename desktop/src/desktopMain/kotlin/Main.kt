@@ -3,6 +3,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
+import info.javaway.spend_sense.root.RootScreen
 
 fun main() {
 
@@ -16,7 +17,7 @@ fun main() {
             state = state,
             title = "SpendSense"
         ) {
-            SayHelloFromCommon()
+            RootScreen()
         }
     }
 }

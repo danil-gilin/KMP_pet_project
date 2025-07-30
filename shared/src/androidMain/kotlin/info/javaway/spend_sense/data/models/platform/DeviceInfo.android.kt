@@ -1,4 +1,4 @@
-package info.javaway.spend_sense.platform
+package info.javaway.spend_sense.data.models.platform
 
 import android.content.res.Resources
 import android.os.Build

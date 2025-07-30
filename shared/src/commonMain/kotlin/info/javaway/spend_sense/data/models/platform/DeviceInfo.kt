@@ -1,6 +1,6 @@
 @file:Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
 
-package info.javaway.spend_sense.platform
+package info.javaway.spend_sense.data.models.platform
 
 expect class DeviceInfo constructor() {
     val osName: String

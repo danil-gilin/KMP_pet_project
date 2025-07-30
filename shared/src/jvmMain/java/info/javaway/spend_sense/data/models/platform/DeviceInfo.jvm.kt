@@ -1,4 +1,4 @@
-package info.javaway.spend_sense.platform
+package info.javaway.spend_sense.data.models.platform
 
 @Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
 actual class DeviceInfo actual constructor() {

@@ -1,4 +1,5 @@
 plugins {
+    alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose.compiler)
@@ -32,6 +33,8 @@ android {
 
     dependencies {
         implementation(libs.android.activity.compose)
+        implementation(libs.material)
+        implementation(compose.material3)
         implementation(project(":shared"))
     }
 }

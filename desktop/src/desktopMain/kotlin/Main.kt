@@ -3,7 +3,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
-import info.javaway.spend_sense.root.RootScreen
+import info.javaway.spend_sense.ui.root.RootScreen
 
 fun main() {
 

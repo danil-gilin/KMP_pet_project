@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.systemBars
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.Layout
+import androidx.compose.ui.unit.dp
 
 /**
  * Упрощенная копия [androidx.compose.material3.Scaffold],
@@ -26,6 +27,7 @@ fun ScaffoldBase(
         }
     ) { measurables, constraints ->
         if (topBar == null) {
+            // не особо нравится как без топ бара работает, но хотя без него и обычный можно использовать  Scaffold
             val contentMeasurable = measurables[0]
             val contentMaxHeight = constraints.maxHeight
             val contentPlaceable = contentMeasurable.measure(constraints.copy(minHeight = 0, maxHeight = contentMaxHeight))

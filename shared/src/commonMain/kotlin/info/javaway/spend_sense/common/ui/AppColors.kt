@@ -11,11 +11,11 @@ data class AppColors(
 )
 
 val lightPalette = AppColors(
-    accent = Color(0xFFFFF59D),
-    background = Color(0xFFD7FFEA),
-    onBackground = Color(0xFF001329),
-    surface = Color(0xFF8DC2A6),
-    onSurface = Color(0xFF133050),
+    accent = Color(0xFF4CAF50),        // Приятный зелёный для акцентов
+    background = Color(0xFFFFFFFF),    // Белый фон
+    onBackground = Color(0xFF000000),  // Чёрный текст на фоне
+    surface = Color(0xFFF0F0F0),       // Светло-серый для карточек и элементов
+    onSurface = Color(0xFF333333),     // Тёмно-серый текст на surface
 )
 val darkPalette = AppColors(
     accent = Color(0xFFAF9363),

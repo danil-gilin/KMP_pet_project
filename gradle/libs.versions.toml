@@ -4,10 +4,14 @@ compose-plugin = "1.8.2"
 agp = "8.11.0"
 activity-compose = "1.10.1"
 material = "1.12.0"
+moko-res = "0.25.0"
 
 [libraries]
 android-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+moko-res = { module = "dev.icerock.moko:resources-generator", version.ref = "moko-res" }
+moko-resources-core = { module = "dev.icerock.moko:resources", version.ref = "moko-res" }
+moko-resources-compose = { module = "dev.icerock.moko:resources-compose", version.ref = "moko-res" }
 
 [plugins]
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
@@ -16,3 +20,4 @@ multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotl
 android-application = {id = "com.android.application", version.ref = "agp"}
 android-library = {id = "com.android.library", version.ref = "agp"}
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin"}
+moko-res = {id = "dev.icerock.mobile.multiplatform-resources", version.ref = "moko-res"}

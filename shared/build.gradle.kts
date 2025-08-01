@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.multiplatform)
     alias(libs.plugins.android.library)
+    alias(libs.plugins.moko.res)
 }
 
 kotlin {
@@ -32,9 +33,15 @@ kotlin {
                 implementation(compose.material3)
                 implementation(compose.materialIconsExtended)
                 implementation(compose.components.resources)
+                api(libs.moko.resources.compose)
+                api(libs.moko.resources.core)
             }
         }
     }
+}
+
+multiplatformResources {
+    resourcesPackage.set("info.javaway.spend_sense")
 }
 
 

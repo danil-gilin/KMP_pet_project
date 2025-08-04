@@ -6,24 +6,26 @@ import info.javaway.spend_sense.data.models.platform.DeviceInfo
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
-class SettingsViewModel : BaseViewModel<SettingsContract.State, Nothing>() {
+class SettingsViewModel(
+    private val deviceInfo: DeviceInfo,
+    private val settingsManager: SettingsManager
+) : BaseViewModel<SettingsContract.State, Nothing>() {
 
     init {
 
-        SettingsManager.themeIsDarkFlow.onEach {
+        settingsManager.themeIsDarkFlow.onEach {
             updateState {
                 copy(themeDark = it)
             }
         }.launchIn(viewModelScope)
 
-        val deviceInfo = DeviceInfo()
         updateState {
-            copy(deviceInfo = deviceInfo.getSummary())
+            copy(info = deviceInfo.getSummary())
         }
     }
 
     fun switchTheme(isDark: Boolean) {
-        SettingsManager.themeIsDark = isDark
+        settingsManager.themeIsDark = isDark
     }
 
     override fun initialState() = SettingsContract.State.NONE

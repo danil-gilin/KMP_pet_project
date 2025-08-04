@@ -21,14 +21,14 @@ import androidx.compose.ui.unit.dp
 import dev.icerock.moko.resources.compose.stringResource
 import info.javaway.spend_sense.MR
 import info.javaway.spend_sense.common.ui.AppThemeProvider
+import info.javaway.spend_sense.di.getKoinInstance
 import info.javaway.spend_sense.presenter.settings.SettingsViewModel
-import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun SettingsScreen(
+    viewModel: SettingsViewModel,
     modifier: Modifier = Modifier
 ) {
-    val viewModel = remember { SettingsViewModel() }
     val state by viewModel.state.collectAsState()
 
     Box(
@@ -44,7 +44,7 @@ fun SettingsScreen(
             ) {
                 Text(
                     modifier = Modifier.padding(16.dp),
-                    text = state.deviceInfo,
+                    text = state.info,
                     color = AppThemeProvider.colors.onSurface
                 )
             }

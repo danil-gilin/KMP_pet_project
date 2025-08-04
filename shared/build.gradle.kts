@@ -26,6 +26,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
+                // Compose
                 implementation(compose.foundation)
                 implementation(compose.runtime)
                 implementation(compose.ui)
@@ -33,9 +34,15 @@ kotlin {
                 implementation(compose.material3)
                 implementation(compose.materialIconsExtended)
                 implementation(compose.components.resources)
+
+                // Settings
                 implementation(libs.settings)
+                // Resources
                 api(libs.moko.resources.compose)
                 api(libs.moko.resources.core)
+                // DI
+                api(project.dependencies.platform(libs.koin.bom))
+                api(libs.koin.core)
             }
         }
     }

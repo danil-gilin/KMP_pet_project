@@ -11,8 +11,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import info.javaway.spend_sense.categories.CategoriesScreen
-import info.javaway.spend_sense.common.ui.AppTheme
-import info.javaway.spend_sense.common.ui.AppThemeProvider
+import info.javaway.spend_sense.common.ui.theme.AppTheme
+import info.javaway.spend_sense.common.ui.theme.AppThemeProvider
 import info.javaway.spend_sense.di.getKoinInstance
 import info.javaway.spend_sense.events.EventsScreen
 import info.javaway.spend_sense.root.RootViewModel

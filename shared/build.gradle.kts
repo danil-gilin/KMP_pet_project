@@ -1,6 +1,3 @@
-import org.gradle.kotlin.dsl.dependencies
-import org.gradle.kotlin.dsl.implementation
-
 plugins {
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
@@ -43,6 +40,8 @@ kotlin {
                 // DI
                 api(project.dependencies.platform(libs.koin.bom))
                 api(libs.koin.core)
+
+                implementation(libs.datetime)
             }
         }
     }

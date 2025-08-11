@@ -1,6 +1,7 @@
 package info.javaway.spend_sense.di
 
 import info.javaway.spend_sense.di.modules.CoreModule
+import info.javaway.spend_sense.di.modules.RepositoryModule
 import info.javaway.spend_sense.di.modules.StorageModule
 import info.javaway.spend_sense.di.modules.ViewModelsModule
 import org.koin.core.component.KoinComponent
@@ -25,6 +26,7 @@ fun initKoin(
         CoreModule.deviceInfo,
         StorageModule.settings,
         ViewModelsModule.viewModels,
+        RepositoryModule.repository,
         platformModule,
         appModule
     )

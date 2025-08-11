@@ -12,7 +12,7 @@ import info.javaway.spend_sense.common.ui.theme.AppThemeProvider
 @Composable
 fun AppButton(
     title: String,
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     omClick: () -> Unit
 ) {
     OutlinedButton(

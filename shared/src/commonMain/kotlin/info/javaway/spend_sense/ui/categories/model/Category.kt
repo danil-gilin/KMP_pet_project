@@ -1,4 +1,4 @@
-package info.javaway.spend_sense.categories.model
+package info.javaway.spend_sense.ui.categories.model
 
 import info.javaway.spend_sense.extensions.now
 import kotlinx.datetime.LocalDateTime

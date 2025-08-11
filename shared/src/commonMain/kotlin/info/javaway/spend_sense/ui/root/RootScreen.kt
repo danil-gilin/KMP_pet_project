@@ -10,7 +10,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import info.javaway.spend_sense.categories.CategoriesScreen
+import info.javaway.spend_sense.ui.categories.CategoriesScreen
 import info.javaway.spend_sense.common.ui.theme.AppTheme
 import info.javaway.spend_sense.common.ui.theme.AppThemeProvider
 import info.javaway.spend_sense.di.getKoinInstance
@@ -57,6 +57,6 @@ fun BoxScope.RootNavigation(selectedTab: AppTab) {
             getKoinInstance(),
             modifier = Modifier.align(Alignment.Center)
         )
-        AppTab.Categories -> CategoriesScreen(modifier = Modifier.align(Alignment.Center))
+        AppTab.Categories -> CategoriesScreen(getKoinInstance())
     }
 }

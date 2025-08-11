@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import info.javaway.spend_sense.common.ui.theme.AppThemeProvider
 import info.javaway.spend_sense.extensions.fromHex
 
 @Composable
@@ -16,7 +17,7 @@ fun ColorLabel(colorHex: String) {
     Box(
         modifier = Modifier
             .size(40.dp)
-            .background(Color.fromHex(colorHex).copy(0.8f), RoundedCornerShape(8.dp))
-            .border(2.dp, Color.fromHex(colorHex), RoundedCornerShape(8.dp))
+            .background(Color.fromHex(colorHex, AppThemeProvider.colors.background).copy(0.8f), RoundedCornerShape(8.dp))
+            .border(2.dp, Color.fromHex(colorHex, AppThemeProvider.colors.accent), RoundedCornerShape(8.dp))
     )
 }

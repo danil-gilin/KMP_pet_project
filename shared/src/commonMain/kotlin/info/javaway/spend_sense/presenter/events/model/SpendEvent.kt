@@ -1,6 +1,9 @@
-package info.javaway.spend_sense.events.model
+package info.javaway.spend_sense.presenter.events.model
 
+import info.javaway.spend_sense.common.ui.calendar.model.CalendarLabel
 import info.javaway.spend_sense.extensions.now
+import info.javaway.spend_sense.ui.categories.model.Category
+import info.javaway.spend_sense.ui.events.model.SpendEventUi
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalDateTime
@@ -43,3 +46,16 @@ data class SpendEvent(
         }
     }
 }
+
+fun SpendEvent.toUi(category: Category) = SpendEventUi(
+    id = id,
+    category = category,
+    title = title,
+    cost = cost
+)
+
+fun SpendEvent.toCalendarLabel(category: Category) = CalendarLabel(
+    id = id,
+    colorHex = category.colorHex,
+    localDate = date
+)

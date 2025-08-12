@@ -24,7 +24,7 @@ fun CategoryItem(category: Category, onClick: () -> Unit) {
             .background(AppThemeProvider.colors.surface, RoundedCornerShape(8.dp))
             .padding(8.dp)
             .clickable {
-                onClick
+                onClick()
             },
         verticalAlignment = Alignment.CenterVertically
     ) {

@@ -89,6 +89,15 @@ fun CreateEventView(
             }
         )
 
+        AppTextField(
+            state.note,
+            placeholder = "note",
+            modifier = Modifier.fillMaxWidth(),
+            onValueChange = {
+                viewModel.changeNote(it)
+            }
+        )
+
 
         AppTextField(
             state.cost.toString(),

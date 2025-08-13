@@ -9,7 +9,7 @@ import org.koin.dsl.module
 
 object RepositoryModule {
     val repository = module {
-        single { CategoriesRepositoryImpl() } bind CategoriesRepository::class
-        single { EventsRepositoryImpl() } bind EventsRepository::class
+        single { CategoriesRepositoryImpl(get()) } bind CategoriesRepository::class
+        single { EventsRepositoryImpl(get()) } bind EventsRepository::class
     }
 }

@@ -11,6 +11,7 @@ interface CreateEventContract {
 
     data class State(
         val title: String,
+        val note: String,
         val category: Category,
         val date: LocalDate,
         val cost: Double
@@ -18,6 +19,7 @@ interface CreateEventContract {
         companion object Companion {
             val NONE = State(
                 title = "",
+                note = "",
                 category = Category.NONE,
                 date = LocalDate.now(),
                 cost = 0.0

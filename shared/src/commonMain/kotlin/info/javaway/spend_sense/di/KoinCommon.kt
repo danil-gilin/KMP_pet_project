@@ -1,6 +1,7 @@
 package info.javaway.spend_sense.di
 
 import info.javaway.spend_sense.di.modules.CoreModule
+import info.javaway.spend_sense.di.modules.DBModules
 import info.javaway.spend_sense.di.modules.RepositoryModule
 import info.javaway.spend_sense.di.modules.StorageModule
 import info.javaway.spend_sense.di.modules.ViewModelsModule
@@ -28,6 +29,8 @@ fun initKoin(
         ViewModelsModule.viewModels,
         RepositoryModule.repository,
         platformModule,
-        appModule
+        appModule,
+        DBModules.dao,
+        DBModules.db
     )
 }

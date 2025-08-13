@@ -15,6 +15,7 @@ class CreateEventViewModel : BaseViewModel<State, Event>() {
     fun selectDate(date: LocalDate?) = updateState { copy(date = date ?: LocalDate.now()) }
     fun resetState() = updateState { State.NONE }
     fun changeTitle(title: String) = updateState { copy(title = title) }
+    fun changeNote(note: String) = updateState { copy(note = note) }
     fun changeCost(cost: String) = updateState { copy(cost = cost.toDoubleOrNull() ?: this.cost) }
     fun selectCategory(category: Category) = updateState { copy(category = category) }
 
@@ -28,7 +29,8 @@ class CreateEventViewModel : BaseViewModel<State, Event>() {
                 date = date,
                 categoryId = category.id,
                 createdAt = now,
-                updateAt = now
+                updateAt = now,
+                note = note
             )
         }
         resetState()

@@ -20,7 +20,8 @@ data class SpendEvent(
     val cost: Double,
     val date: LocalDate,
     val createdAt: LocalDateTime,
-    val updateAt: LocalDateTime
+    val updateAt: LocalDateTime,
+    val note: String,
 ) {
 
     companion object {
@@ -31,7 +32,8 @@ data class SpendEvent(
             cost = 0.0,
             date = LocalDate.now(),
             createdAt = LocalDateTime.now(),
-            updateAt = LocalDateTime.now()
+            updateAt = LocalDateTime.now(),
+            note = ""
         )
 
         @OptIn(ExperimentalTime::class)

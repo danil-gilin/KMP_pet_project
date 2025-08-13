@@ -6,7 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5A1B88892E4CDE3A0045961A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1B88882E4CDE3A0045961A /* libsqlite3.tbd */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		5A1B88882E4CDE3A0045961A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
 		5A3D53BE2E32A7F000CCA168 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,16 +41,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A1B88892E4CDE3A0045961A /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A1B88872E4CDE3A0045961A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A1B88882E4CDE3A0045961A /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5A3D53B52E32A7F000CCA168 = {
 			isa = PBXGroup;
 			children = (
 				5A3D53C02E32A7F000CCA168 /* iosApp */,
+				5A1B88872E4CDE3A0045961A /* Frameworks */,
 				5A3D53BF2E32A7F000CCA168 /* Products */,
 			);
 			sourceTree = "<group>";
